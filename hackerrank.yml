@@ -1,0 +1,18 @@
+version: 1.0
+configuration:
+  has_webserver: false
+  readonly_paths:
+    - src/test/*
+  scoring:
+    command: mvn clean test
+    files:
+      - target/surefire-reports/TEST-com.hackerrank.springsecurity.SpringSecurityTest.xml
+  ide_config:
+    default_open_files:
+      - src/main/java/com/hackerrank/springsecurity/repository/UserRepository.java
+      - src/main/java/com/hackerrank/springsecurity/service/UserDetailsServiceImp.java
+      - src/main/java/com/hackerrank/springsecurity/config/WebSecurityConfig.java
+      - src/test/java/com/hackerrank/springsecurity/SpringSecurityTest.java
+    project_menu:
+      test: mvn clean test
+
